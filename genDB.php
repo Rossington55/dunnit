@@ -19,6 +19,8 @@
                     )";
 
         require("settings.php");
+        echo "die";
+        /*
         $conn = @mysqli_connect($host,$user,$pwd,$sql_db);
 
         //Connect to DB
@@ -52,6 +54,6 @@
             mysqli_close($conn);
 		}else{
             die('Connection error: ' .mysqli_connect_error());    
-		}
+		}*/
 	}
 ?>
