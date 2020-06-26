@@ -8,16 +8,6 @@
    */
 
     function db($query, $isInsert){
-        $createQuery = "CREATE TABLE registration (
-                    ID INT AUTO_INCREMENT PRIMARY KEY,
-                    reference_no VARCHAR(6),
-                    username VARCHAR(20),
-                    qualification VARCHAR(15),
-                    email VARCHAR(100),
-                    phone_no VARCHAR(10),
-                    role VARCHAR(15)
-                    )";
-
         require("settings.php");
         $conn = @mysqli_connect($host,$user,$pwd,$sql_db);
         
