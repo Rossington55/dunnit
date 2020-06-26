@@ -51,7 +51,7 @@
 
             mysqli_close($conn);
 		}else{
-            echo "<p>Unable to connect to the db</p>";    
+            die('Connection error: ' .mysqli_connect_error());    
 		}
 	}
 ?>
