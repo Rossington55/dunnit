@@ -1,6 +1,6 @@
 ﻿<?php
-	$host = "sql212.epizy.com";
-    $user = "epiz_26109083";
-    $pwd = "8fxrcOGXNHO44ZdXBH$*WC@JvW";
-    $sql_db = "epiz_26109083_dunnit";
+	$host = "us-cdbr-east-02.cleardb.com";
+    $user = "b15cca192928a8";
+    $pwd = "bc7b7173";
+    $sql_db = "heroku_1013c80660659a6";
 ?>
