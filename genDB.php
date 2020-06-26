@@ -19,9 +19,9 @@
                     )";
 
         require("settings.php");
+        $conn = @mysqli_connect($host,$user,$pwd,$sql_db);
         echo "die";
         /*
-        $conn = @mysqli_connect($host,$user,$pwd,$sql_db);
 
         //Connect to DB
         if($conn){
