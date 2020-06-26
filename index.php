@@ -1,3 +1,7 @@
 ﻿<?php
-echo "<p>Hello World!</p>";
+require("settings.php");
+$query = "SELECT * FROM test";
+$result = db($query,false);
+
+echo $result;
 ?>
