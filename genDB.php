@@ -3,7 +3,7 @@
     filename: genDB.php
     author: Harrison Feldman
     created: 20/06/20
-    last modified: 20/06/2020
+    last modified: 26/06/2020
     description: a generic function to pass any query to the registration table
    */
 
@@ -13,13 +13,6 @@
         
         //Connect to DB
         if($conn){
-
-            //Check if the table exists
-            $exists = mysqli_query($conn,"SELECT 1 FROM registration");
-            if(!$exists){
-                echo "<p>Table doesn't exist, creating table</p>";
-                mysqli_query($conn,$createQuery);//Create the table
-			}
 
             //Send the requested query
             $result = mysqli_query($conn, $query);
