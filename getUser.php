@@ -15,5 +15,5 @@
 	$result = db($query,false);
 
 	ob_clean();
-	echo $result;
+	echo json_encode($result);
 ?>
