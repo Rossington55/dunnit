@@ -15,7 +15,6 @@
 	$result = db($query,false);
 
 	if($result == null){
-		echo "<p>$result</p>";
 		$query = "INSERT INTO users (user_id) VALUES ($userId)";
 		$result = db($query,true);
 	}
