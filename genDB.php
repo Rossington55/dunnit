@@ -16,6 +16,7 @@
 
             //Send the requested query
             $result = mysqli_query($conn, $query);
+            echo $query;
             echo $result;
             if($result){//Check for success
                 if($isInsert){//Return the newly created id
