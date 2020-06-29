@@ -30,6 +30,7 @@
 				}
 			}else{
                 echo "<p>Error in query</p>";
+                return null;
 			}
 
             mysqli_close($conn);
