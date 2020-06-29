@@ -11,7 +11,7 @@
 	}
 	
 
-	$query = "SELECT * FROM users WHERE user_id = '$userId''";
+	$query = "SELECT * FROM users WHERE user_id = $userId";
 	$result = db($query,false);
 
 	if($result == null){
