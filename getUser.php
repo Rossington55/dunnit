@@ -12,11 +12,11 @@
 	
 
 	$query = "SELECT * FROM users WHERE user_id = $userId";
-	$result = db($query,false);
+	$result = db($query);
 
 	if($result == null){
 		$query = "INSERT INTO users (user_id) VALUES ($userId)";
-		$result = db($query,true);
+		$result = db($query);
 	}
 
 	ob_clean();
