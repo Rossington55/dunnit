@@ -11,14 +11,14 @@
 	}
 	
 
-	$query = "SELECT * FROM users WHERE user_id = $userId";
+	$query = "SELECT badge FROM users WHERE user_id = $userId";
 	$result = db($query,false);
 
-	if($result == null){
-		$query = "INSERT INTO users (user_id) VALUES ($userId)";
+	if($result == null){//No user was found, create a new user
+		$query = "INSERT INTO users (user_id, badge) VALUES ($userId, 0)";
 		$result = db($query,true);
 
-		$query = "SELECT * FROM users WHERE id = $result";
+		$query = "SELECT badge FROM users WHERE id = $result";
 		$result = db($query,false);
 	}
 
