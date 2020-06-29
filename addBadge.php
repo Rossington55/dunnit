@@ -22,6 +22,14 @@
 	$query = "INSERT INTO users (user_id, badge) VALUES ('$userId',$badge)";
 	$result = db($query,true);
 
+	if(!$result){
+		ob_clean();
+		return;
+	}
+
+	$query = "SELECT badge FROM users WHERE user_id = '$userId'";
+	$result = db($query,false);
+
 	ob_clean();
 	echo json_encode($result);
 ?>
