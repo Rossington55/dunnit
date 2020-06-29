@@ -5,9 +5,9 @@
 	
 	if(isset ($_GET["id"])){
 		$userId = sanitise_input($_GET["id"]);
-		echo "<p>$userId</p>";
 	}else{
 		echo "<p>Error: No user id given</p>";
+		return;
 	}
 	
 
