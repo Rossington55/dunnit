@@ -17,8 +17,8 @@
 	if($result == null){
 		$query = "INSERT INTO users (user_id) VALUES ($userId)";
 		$result = db($query,true);
+		echo "<p>$result</p>";
 	}
 
-	ob_clean();
 	echo json_encode($result);
 ?>
