@@ -14,6 +14,11 @@
 	$query = "SELECT 1 FROM users WHERE user_id = '$userId''";
 	$result = db($query,false);
 
+	if($result == null){
+		$query = "INSERT INTO users (user_id) VALUES ($userId)";
+		$result = db($query,true);
+	}
+
 	ob_clean();
 	echo json_encode($result);
 ?>
