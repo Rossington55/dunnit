@@ -20,8 +20,8 @@
 	
 	$query = "SELECT * FROM users WHERE user_id = '$userId' AND badge=$badge";
 	$result = db($query,false);
-	if($result == null){
-		echo "Already exists";
+	if($result != null){
+		echo "<p>Already exists</p>";
 		return false;
 	}
 	
