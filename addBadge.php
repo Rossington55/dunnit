@@ -18,7 +18,13 @@
 		return;
 	}
 	
-
+	$query = "SELECT * FROM users WHERE user_id = '$userId' AND badge=$badge";
+	$result = db($query,false);
+	if($result == null){
+		echo "Already exists";
+		return false;
+	}
+	
 	$query = "INSERT INTO users (user_id, badge) VALUES ('$userId',$badge)";
 	$result = db($query,true);
 
