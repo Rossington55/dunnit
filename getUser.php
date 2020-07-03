@@ -29,7 +29,7 @@
 		$result = db($query,true);
 
 		$query = "SELECT DISTINCT(user_id) FROM completed WHERE user_id = '$userId'";
-		$result = db($query,true);
+		$result = db($query,false);
 	}
 
 	ob_clean();
