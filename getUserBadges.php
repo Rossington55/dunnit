@@ -11,6 +11,7 @@
 	}
 	
 	$query = "SELECT badge FROM completed WHERE user_id = '$userId'";
+	$result = db($query,false);
 
 	ob_clean();
 	echo json_encode($result);
