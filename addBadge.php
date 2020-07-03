@@ -18,14 +18,14 @@
 		return;
 	}
 	
-	$query = "SELECT * FROM users WHERE user_id = '$userId' AND badge=$badge";
+	$query = "SELECT * FROM completed WHERE user_id = '$userId' AND badge=$badge";
 	$result = db($query,false);
 	if($result != null){
 		ob_clean();
 		return false;
 	}
 	
-	$query = "INSERT INTO users (user_id, badge) VALUES ('$userId',$badge)";
+	$query = "INSERT INTO completed (user_id, badge) VALUES ('$userId',$badge)";
 	$result = db($query,true);
 
 	if(!$result){
@@ -33,7 +33,7 @@
 		return;
 	}
 
-	$query = "SELECT badge FROM users WHERE user_id = '$userId'";
+	$query = "SELECT badge FROM completed WHERE user_id = '$userId'";
 	$result = db($query,false);
 
 	ob_clean();
