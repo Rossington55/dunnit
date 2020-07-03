@@ -20,7 +20,8 @@
 	
 	$query = "SELECT * FROM users WHERE user_id = '$userId'";
 	$results = db($query,false);
-
+	echo $results;
+	return;
 	if($result == null){//No user was found, create a new user
 		$query = "INSERT INTO users (user_id, fullname) VALUES ('$userId', '$name')";
 		$result = db($query,true);
