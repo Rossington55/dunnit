@@ -27,6 +27,9 @@
 
 		$query = "INSERT INTO completed (user_id, badge) VALUES ('$userId',0)";
 		$result = db($query,true);
+
+		$query = "SELECT DISTINCT(user_id) FROM completed WHERE user_id = '$userId'";
+		$result = db($query,true);
 	}
 
 	ob_clean();
