@@ -18,7 +18,7 @@
 		return;
 	}
 	
-	$query = "SELECT user_id FROM users WHERE user_id = '$userId'";
+	$query = "SELECT * FROM users WHERE user_id = '$userId'";
 	$results = db($query,false);
 
 	if($result == null){//No user was found, create a new user
